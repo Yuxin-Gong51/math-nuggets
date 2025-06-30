@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\title{Elementary Complex Functions}
+\author{Yuxin Gong}
+\date{April 2025}
+\linespread{1.6}
+\begin{document}
+\maketitle
+\section{Introduction}
+In this note, we will introduce some basic functions $f : \mathbb{C} \to \mathbb{C}$.
+Things seem to become complicated when they are written complex numbers.
+However, it turns out many things in complex will become much simpler in 
+real functions. For example, if we say some functions is holomorphic, it 
+will then be infinitly differentiable. Anyway, those are strayed off topic we gonna
+discuss today. Before discussing the topic, let me quote a sentence that might
+be instructive for complex analysis.
+\begin{quote}
+    \textit{Sometimes the quickest way forward is the long road around.}
+\end{quote}
+\section{Problems}
+Consider the following function
+$$
+f : \mathbb{C} \to \mathbb{C}\, , \, f(z) = z^\alpha
+$$
+Think about the cases where $z$ is a real number. If $\alpha$ is an integer, we have 
+nothing to worry about cuz it is just some self-multiplication. In real analysis, we 
+know that $x^{\alpha}$ is continuous for every real power on the region $(0, \infty)$.
+However, in complex analysis, we should really think about a general way to 
+define such function.
+\section{Exponential Functions}
+In general, there are two ways to define $e^z$, one defines using the series
+$$
+e^z = \sum_{k = 0}^{\infty} \frac{z^k}{k !}
+$$
+Alternatively, one can define $e^z = e^x \cos(y) + e^x \sin(y)i$. They are equivalenet, 
+having benefits for different purposes. Let's use the second one here.
+Using Cauchy-Riemann equations, 
+\begin{align}
+\frac{\partial }{\partial x}e^x \cos(y) &= \frac{\partial}{\partial y} e^x \sin(y) \\
+\frac{\partial }{\partial y}e^x \cos(y) &= -\frac{\partial}{\partial x} e^x \sin(y)
+\end{align}
+$e^z$ is holomorphic for all $z \in \mathbb{C}$. It has some property we expect
+$$
+e^{z_1 + z_2} = e^{z_1} \cdot e^{z_2} 
+$$
+\end{document}
